@@ -341,6 +341,64 @@ template {
   display: none;
 }
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+  padding: 0;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  margin: 0;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 @font-face {
   font-family: 'Roboto';
   src: url(../font/Roboto-Regular.ttf);
@@ -373,7 +431,7 @@ html {
   background-color: #102740;
 }
 
-.fa-search {
+.fa-search .iconButton {
   font-size: 1.4rem;
 }
 
@@ -420,8 +478,149 @@ html {
 }
 
 .bannerSectionWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   height: 18rem;
   background: url("../img/banner.jpg") center no-repeat;
   background-size: cover;
+  padding: 0 .6em .9em;
+}
+
+.eventInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.eventInfoTime {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.eventInfoTime .badge {
+  background-color: #068f00;
+  padding: .5em .6em;
+}
+
+.eventInfoTime .text {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.matchTime, .sportsCategory, .leagueCategory {
+  color: #9BADD4;
+  font-family: "Roboto", Lato, Helvetica, Arial, Sans-Serif;
+  font-size: 1.2rem;
+  margin-left: .5em;
+}
+
+.scoreInfo {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: .4em 0 .7em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 .5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.scoreInfo .teamName {
+  color: #ffffff;
+  font-size: 1.8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  width: 35%;
+}
+
+.scoreInfo .scoreTeamWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.scoreInfo .scoreTeam {
+  background-color: #328dc9;
+  padding: 1.1em 1.1em;
+  border-radius: .4em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.scoreInfo .text {
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
+.scoreInfo .middle {
+  padding: 0 .6em;
+}
+
+.button {
+  border: 0.1em solid #939da7;
+  border-radius: .2em;
+  padding: 1.2em .9em;
+}
+
+.infoOdds {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.infoOddsText {
+  color: #264570;
+  font-size: 1.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  width: 25%;
+}
+
+.infoOddsValue {
+  color: #264570;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 /*# sourceMappingURL=main.css.map */

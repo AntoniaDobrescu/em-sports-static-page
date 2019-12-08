@@ -25,6 +25,12 @@ $widthMobile: 479px;
 
 $colorElephant: #102740;
 $colorHeather: #AFBCCB;
+$colorJapaneseLaurel: #068f00;
+$colorWhite: #ffffff;
+$colorPoloBlue: #9BADD4;
+$colorCuriousBlue: #328dc9;
+$colorAstronaut: #264570;
+$colorRegentGrey: #939da7;
 
 html {
     font-size: 10px;
@@ -39,7 +45,7 @@ html {
     background-color: $colorElephant;
 }
 
-.fa-search {
+.fa-search .iconButton {
     font-size: 1.4rem;
 }
 
@@ -69,7 +75,112 @@ html {
 }
 
 .bannerSectionWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     height: 18rem;
     background: url('../img/banner.jpg') center no-repeat;
     background-size: cover;
+    padding: 0 .6em .9em;
+    
+}
+
+.eventInfo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.eventInfoTime {
+    display: flex;
+    align-items: center;
+
+    .badge {
+        background-color: $colorJapaneseLaurel;
+        padding: .5em .6em;
+    }
+
+    .text {
+        color: $colorWhite;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+}
+
+.matchTime, .sportsCategory, .leagueCategory {
+    color: $colorPoloBlue;
+    font-family: $fontRoboto;
+    font-size: 1.2rem;
+    margin-left: .5em;
+}
+
+.scoreInfo {
+    width: 100%;
+    background-color:rgba(0, 0, 0, 0.2);
+    margin: .4em 0 .7em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 .5rem;
+    box-sizing: border-box;
+
+    .teamName {
+        color: $colorWhite;
+        font-size: 1.8rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: block;
+        width: 35%;
+    }
+
+    .scoreTeamWrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .scoreTeam {
+        background-color: $colorCuriousBlue;
+        padding: 1.1em 1.1em;
+        border-radius: .4em;
+        box-sizing: border-box;
+    }
+    
+    .text {
+        font-size: 1.8rem;
+        color: $colorWhite;
+    }
+
+    .middle {
+        padding: 0 .6em;
+    }
+}
+
+.button {
+    border: .1em solid $colorRegentGrey;
+    border-radius: .2em;
+    padding: 1.2em .9em;
+}
+
+.infoOdds {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.infoOddsText {
+    color: $colorAstronaut;
+    font-size: 1.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    width: 25%;
+}
+
+.infoOddsValue {
+    color: $colorAstronaut;
+    font-size: 1.8rem;
+    font-weight: bold;
 }
