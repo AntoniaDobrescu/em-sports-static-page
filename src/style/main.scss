@@ -1,0 +1,75 @@
+@import 'normalize';
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../font/Roboto-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url(../font/RobotoCondensed-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url(../font/RobotoCondensed-Bold.ttf);
+    font-weight: bold;
+}
+
+$fontRobotoCondensed: 'Roboto Condensed', Lato, Helvetica, Arial, Sans-Serif;
+$fontRoboto: 'Roboto', Lato, Helvetica, Arial, Sans-Serif;
+
+$widthMobile: 479px;
+
+$colorElephant: #102740;
+$colorHeather: #AFBCCB;
+
+html {
+    font-size: 10px;
+    min-height: 100vh;
+    background: $colorElephant;
+    font-family: $fontRobotoCondensed;
+}
+
+.container {
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: $colorElephant;
+}
+
+.fa-search {
+    font-size: 1.4rem;
+}
+
+.searchBarButton {
+    padding: 1.825em .8em 1.825em;
+    border: none;
+}
+
+.searchBarInput {
+    width: 100%;
+    padding: 1.825em 1.2em 1.825em;
+    border: none;
+}
+
+.searchBar {
+    display: flex;
+    margin-bottom: 2em;
+}
+
+::placeholder {
+    font-size: 1.4rem;
+    color: $colorHeather;
+}
+
+.boxesWrapper {
+    display: none;
+}
+
+.bannerSectionWrapper {
+    height: 18rem;
+    background: url('../img/banner.jpg') center no-repeat;
+    background-size: cover;
+}

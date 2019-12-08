@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0,
+            maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Sports Page</title>
+        <link rel="stylesheet" href="../src/font icon/fontawesome-free-5.11.2-web/fontawesome-free-5.11.2-web/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="../src/style/main.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <aside class="menu">
+                <div class="searchBar">
+                    <button class="searchBarButton" type='button'>
+                        <i class='fas fa-search iconButton'></i>
+                    </button><input class='searchBarInput' type="text"placeholder="Search here">
+                </div>
+                <div class="boxesWrapper">
+                    <div class="boxCategory liveCategory">
+                        <div class="headerCategory">
+                            <span class="iconCategory"></span>
+                            <h2 class="titleCategory">Live Events</span>
+                            <span class="dropDownIcon"></span>
+                        </div>
+                        <div class="contentCategory">
+                            <ul class="listContent">
+                                <li class="itemContent">
+                                    <button class="itemButton">
+                                        <span class="itemIcon"></span>
+                                        <span class="itemName">Overview</span>
+                                    </button>
+                                </li>
+                                <li class="itemContent">
+                                    <button class="itemButton">
+                                        <span class="itemIcon"></span>
+                                        <span class="itemName">Event view</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="boxCategory">
+                        <div class="headerCategory">
+                            <span class="iconCategory"></span>
+                            <h2 class="titleCategory">Favorites</h2>
+                            <span class="dropDownIcon"></span>
+                        </div>
+                        <div class="contentCategory">
+                            <p class="text">Select your favorite tournaments and
+                                events</p>
+                        </div>
+                    </div>
+                    <div class="boxCategory">
+                        <div class="headerCategory">
+                            <span class="iconCategory"></span>
+                            <h2 class="titleCategory">TOP LINKS</h2>
+                            <span class="dropDownIcon"></span>
+                        </div>
+                        <div class="contentCategory">
+                            <ul class="listContent">
+                                <li class="itemContent">
+                                    <button class="itemButton">
+                                        <span class="itemIcon"></span>
+                                        <span class="itemName">Liga 1</span>
+                                    </button>
+                                </li>
+                                <li class="itemContent">
+                                    <button class="itemButton">
+                                        <span class="itemIcon"></span>
+                                        <span class="itemName">Europa League</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <main class="mainContent">
+                <section class="bannerSection">
+                    <div class="bannerSectionWrapper">
+                        <div class="eventInfo">
+                            <span class="eventInfoTime">
+                                <span class="badge">LIVE</span>
+                                <span class="matchTime">1 st half - 34:45</span>
+                            </span>
+                            <div>
+                                <span class="sportsCategory">Football</span>/
+                                <span class="leagueCategory">Europe League</span>
+                            </div>
+                        </div>
+                        <div class="scoreInfo">
+                            <span class="teamName">Esperance portive de Tunis</span>
+                            <span class="scoreTeam">17</span>:
+                            <span class="scoreTeam">23</span>
+                            <span class="teamName">Club Olimpique de Medeine</span>
+                        </div>
+                        <div class="infoOdds">
+                            <button class="odd">
+                                <span class="oddText">Esperance portive de Tunis</span>
+                                <span class="oddValue">2.55</span>
+                            </button>
+                            <button class="odd">
+                                <span class="oddText">Draw</span>
+                                <span class="oddValue">3.40</span>
+                            </button>
+                            <button class="odd">
+                                <span class="oddText">Club Olimpique de Medeine</span>
+                                <span class="oddValue">2.55</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="pagination">
+                        <ul class="paginationList">
+                            <li class="paginationItem">button</li>
+                            <li class="paginationItem"></li>
+                            <li class="paginationItem active"></li>
+                            <li class="paginationItem"></li>
+                            <li class="paginationItem"></li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="bettingSection">
+                    <div class="tabsContainer">
+                        <button class="tab">Live</button>
+                        <button class="tab">Upcoming</button>
+                        <button class="tab">Top links</button>
+                    </div>
+                    <div class="matchesListContainer">
+                        <div class="matchesListHeader">
+                            <div class="event">Event</div>
+                            <div class="oddsContainer">
+                                <div class="oddType">Home</div>
+                                <div class="oddType">Draw</div>
+                                <div class="oddType">Away</div>
+                                <div class="oddType">Points</div>
+                                <div class="oddType">Over</div>
+                                <div class="oddType">Under</div>
+                            </div>
+                            <button class="viewType"></button>
+                        </div>
+                        <div class="matchesList">
+                            <ul class="matchesListItem">
+
+                            </ul>
+                            <ul class="matchListItem"></ul>
+                            <ul class="matchListItem"></ul>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>
