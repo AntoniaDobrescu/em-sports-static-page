@@ -501,6 +501,9 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .eventInfoTime {
@@ -524,7 +527,7 @@ html {
 }
 
 .matchTime, .sportsCategory, .leagueCategory {
-  color: #9BADD4;
+  color: #93a8ca;
   font-family: "Roboto", Lato, Helvetica, Arial, Sans-Serif;
   font-size: 1.2rem;
   margin-left: .5em;
@@ -578,7 +581,7 @@ html {
 .scoreInfo .scoreTeam {
   background-color: #328dc9;
   padding: 1.1em 1.1em;
-  border-radius: .4em;
+  border-radius: .2em;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -589,13 +592,37 @@ html {
 }
 
 .scoreInfo .middle {
-  padding: 0 .6em;
+  padding: 0 .333em;
 }
 
 .button {
   border: 0.1em solid #939da7;
   border-radius: .2em;
   padding: 1.2em .9em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.button.center {
+  width: 23%;
+  margin: 0 .25%;
+}
+
+.button.right {
+  width: 38%;
+  margin-right: .5%;
+}
+
+.button.left {
+  width: 38%;
+  margin-left: .5%;
 }
 
 .infoOdds {
@@ -608,19 +635,303 @@ html {
           justify-content: space-between;
 }
 
-.infoOddsText {
+.oddText {
   color: #264570;
   font-size: 1.2rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   display: block;
-  width: 25%;
+  width: 65%;
+  text-align: left;
 }
 
-.infoOddsValue {
+.oddValue {
   color: #264570;
   font-size: 1.8rem;
   font-weight: bold;
+}
+
+.pagination {
+  margin: .4rem 0 1.7rem;
+}
+
+.paginationList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bannerNavigation {
+  padding: .2em 1.5em;
+  border: none;
+  background-color: #405266;
+  border-radius: .2em;
+  margin: 0 .5em;
+}
+
+.bannerNavigation.active {
+  background-color: #3CD300;
+}
+
+.bannerSection.left {
+  margin-left: 0;
+}
+
+.bannerNavigation.right {
+  margin-right: 0;
+}
+
+.paginationItem {
+  line-height: 0;
+}
+
+.tabsContainer {
+  width: 100%;
+  margin-bottom: .1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tab {
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  display: inline-block;
+  background: #132f4b;
+  border-bottom: 0.4em solid #1f4766;
+  position: relative;
+  padding: 1rem 0 1.4rem;
+  margin-right: 1px;
+}
+
+.tab.last {
+  margin-right: 0;
+}
+
+.tab .iconTab {
+  display: none;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  left: 50%;
+  bottom: -7px;
+  font-size: 2rem;
+  color: #2a75a6;
+}
+
+.tab.active {
+  background: #1b486c;
+}
+
+.tab.active .iconTab {
+  display: block;
+}
+
+.tab.active .tab {
+  border-bottom: 0.4em solid #1f4766;
+}
+
+.tab .buttonCounter {
+  font-size: .8rem;
+  line-height: 3em;
+  color: #ffffff;
+}
+
+.tab .buttonText {
+  vertical-align: bottom;
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+
+.tab.active {
+  background-color: #1b486c;
+  border-bottom: 0.4em solid #2a75a6;
+}
+
+.matchesListContainer {
+  width: 100%;
+}
+
+.matchesListHeader, .matchWrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.matchesListHeader .event, .matchWrapper .matchDetailes {
+  width: 57%;
+}
+
+.matchesListHeader .oddsContainer, .matchWrapper .matchOdds {
+  width: 39%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.matchesListHeader {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #132f4b;
+  border: 0.1em solid #102740;
+}
+
+.matchesListHeader .event {
+  color: #93a8ca;
+  margin: 0 0 0 .9em;
+}
+
+.matchesListHeader .viewTypeButton {
+  background-color: #1b486c;
+  border: none;
+  padding: .9em .95em;
+  margin: 0 0 0 .5em;
+}
+
+.matchDetailes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: .9em .6em .6em;
+}
+
+.matchWrapper {
+  background-color: #ffffff;
+  border-bottom: 0.1em solid #102740;
+}
+
+.oddsContainer .oddType {
+  color: #93a8ca;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.oddsContainer .oddType.overUnderType {
+  display: none;
+}
+
+@media (min-width: 710px) {
+  .oddsContainer .oddType.overUnderType {
+    display: block;
+  }
+}
+
+.fa-th-list {
+  color: #93a8ca;
+  font-size: 1.4rem;
+}
+
+.matchTeamNamesWrapper .teamName {
+  font-size: 1.2rem;
+  color: #11476b;
+}
+
+.matchTeamNamesWrapper .matchInfo {
+  font-size: 1rem;
+  color: #5684a4;
+  width: 100%;
+  margin: .5em 0 0 0;
+}
+
+.scoreValues {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #3a9221;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.matchOdds .button.homeAwayType {
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 1.4em 1.5em;
+  margin: .5em .1em;
+}
+
+.matchOdds .button.overUnderType {
+  display: none;
+}
+
+@media (min-width: 710px) {
+  .matchOdds .button.overUnderType {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 1.4em 1.5em;
+    margin: .5em .1em;
+  }
+}
+
+.matchOdds .left.homeAwayType {
+  margin-left: 0;
+}
+
+.matchOdds .right.homeAwayType {
+  margin-right: 0;
+}
+
+@media (min-width: 710px) {
+  .matchOdds .right.homeAwayType {
+    margin-right: .1em;
+  }
+}
+
+.matchOdds .oddValue {
+  font-size: 1.4rem;
+  line-height: 1em;
+}
+
+.favouriteWrapper .button {
+  margin: 0 0 0 .5em;
+  border: none;
+  border-radius: 0;
+  height: 100%;
+  padding: 2.1em .9em 2.1em .8em;
+}
+
+.fa-star {
+  font-size: 1.4rem;
 }
 /*# sourceMappingURL=main.css.map */

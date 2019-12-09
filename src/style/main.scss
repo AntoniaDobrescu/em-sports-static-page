@@ -21,7 +21,8 @@
 $fontRobotoCondensed: 'Roboto Condensed', Lato, Helvetica, Arial, Sans-Serif;
 $fontRoboto: 'Roboto', Lato, Helvetica, Arial, Sans-Serif;
 
-$widthMobile: 479px;
+$widthMobile: 710px;
+$widthTablet: 1155px;
 
 $colorElephant: #102740;
 $colorHeather: #AFBCCB;
@@ -31,6 +32,16 @@ $colorPoloBlue: #9BADD4;
 $colorCuriousBlue: #328dc9;
 $colorAstronaut: #264570;
 $colorRegentGrey: #939da7;
+$colorHarlequin: #3CD300;
+$colorFiod: #405266;
+$colorElephantLight: #132f4b;
+$colorBiscay: #1b486c;
+$colorJellyBean: #2a75a6;
+$colorCello: #1f4766;
+$colorPoloBlue: #93a8ca;
+$colorChathamsBlue: #11476b;
+$colorHorizon: #5684a4;
+$colorForestGreen: #3a9221;
 
 html {
     font-size: 10px;
@@ -88,6 +99,7 @@ html {
 .eventInfo {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .eventInfoTime {
@@ -143,7 +155,7 @@ html {
     .scoreTeam {
         background-color: $colorCuriousBlue;
         padding: 1.1em 1.1em;
-        border-radius: .4em;
+        border-radius: .2em;
         box-sizing: border-box;
     }
     
@@ -153,7 +165,7 @@ html {
     }
 
     .middle {
-        padding: 0 .6em;
+        padding: 0 .333em;
     }
 }
 
@@ -161,6 +173,24 @@ html {
     border: .1em solid $colorRegentGrey;
     border-radius: .2em;
     padding: 1.2em .9em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button.center {
+    width: 23%;
+    margin: 0 .25%;
+}
+
+.button.right {
+    width: 38%;
+    margin-right: .5%;
+}
+
+.button.left {
+    width: 38%;
+    margin-left: .5%;
 }
 
 .infoOdds {
@@ -169,18 +199,269 @@ html {
     justify-content: space-between;
 }
 
-.infoOddsText {
+.oddText {
     color: $colorAstronaut;
     font-size: 1.2rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     display: block;
-    width: 25%;
+    width: 65%;
+    text-align: left;
 }
 
-.infoOddsValue {
+.oddValue {
     color: $colorAstronaut;
     font-size: 1.8rem;
     font-weight: bold;
+}
+
+.pagination {
+    margin: .4rem 0 1.7rem;
+ }
+
+
+
+.paginationList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.bannerNavigation {
+    padding: .2em 1.5em;
+    border: none;
+    background-color: $colorFiod;
+    border-radius: .2em;
+    margin: 0 .5em;
+}
+
+.bannerNavigation.active {
+    background-color: $colorHarlequin;
+}
+
+.bannerSection.left {
+    margin-left: 0;
+}
+
+.bannerNavigation.right {
+    margin-right: 0;
+}
+
+.paginationItem {
+    line-height: 0;
+}
+
+.tabsContainer {
+    width: 100%;
+    margin-bottom: .1rem;
+    display: flex;
+}
+
+.tab {
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    display: inline-block;
+    background: $colorElephantLight;
+    border-bottom: .4em solid $colorCello;
+    position: relative;
+    padding: 1rem 0 1.4rem;
+    margin-right: 1px;
+
+    &.last {
+        margin-right: 0;
+    }
+
+    .iconTab {
+        display: none;
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50%;
+        bottom: -7px;
+        font-size: 2rem;
+        color: $colorJellyBean;
+    }
+
+    &.active {
+        background: $colorBiscay;
+
+        .iconTab {
+            display: block;
+        }
+
+        .tab {
+            border-bottom: .4em solid $colorCello;
+        }
+    }
+
+    .buttonCounter {
+        font-size: .8rem;
+        line-height: 3em;
+        color: $colorWhite;
+    }
+
+    .buttonText {
+        vertical-align: bottom;
+        font-size: 1.6rem;
+        color: $colorWhite;
+    }
+}
+
+.tab.active {
+    background-color: $colorBiscay;
+    border-bottom: .4em solid $colorJellyBean;
+}
+
+.matchesListContainer {
+    width: 100%;
+}
+
+.matchesListHeader, .matchWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.matchesListHeader .event, .matchWrapper .matchDetailes {
+    width: 57%;
+}
+
+.matchesListHeader .oddsContainer, .matchWrapper .matchOdds {
+    width: 39%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.matchesListHeader {
+    justify-content: space-between;
+    background-color: $colorElephantLight;
+    border: .1em solid $colorElephant;
+
+    .event {
+        color: $colorPoloBlue;
+        margin: 0 0 0 .9em;
+    }
+
+    .viewTypeButton {
+        background-color: $colorBiscay;
+        border: none;
+        padding: .9em .95em;
+        margin: 0 0 0 .5em;
+    }
+}
+
+.matchDetailes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: .9em .6em .6em;
+}
+
+.matchWrapper {
+    background-color: $colorWhite;
+    border-bottom: .1em solid $colorElephant;
+}
+.oddsContainer {
+
+    .oddType {
+        color: $colorPoloBlue;
+        width: 100%;
+        display: block;
+        text-align: center;
+        // margin: trebuie adaugate margini pe categorii ca la odd buttons
+
+        &.overUnderType {
+            display: none;
+
+            @media(min-width: $widthMobile) {
+                display: block;
+            }
+        }
+    }
+}
+
+.fa-th-list {
+    color: $colorPoloBlue;
+    font-size: 1.4rem;
+}
+
+
+.matchTeamNamesWrapper {
+
+    .teamName {
+       font-size: 1.2rem;
+       color: $colorChathamsBlue; 
+    }
+    .matchInfo {
+       font-size: 1rem;
+       color: $colorHorizon;
+       width: 100%;
+       margin: .5em 0 0 0;
+    }
+}
+
+.scoreValues {
+    display: flex;
+    flex-direction: column;
+    color: $colorForestGreen;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.matchOdds {
+    
+    .button.homeAwayType {
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding: 1.4em 1.5em;
+        margin: .5em .1em;
+    }
+
+    .button.overUnderType {
+        display: none;
+
+        @media(min-width: $widthMobile) {
+            display: block;
+            text-align: center;
+            width: 100%;
+            padding: 1.4em 1.5em;
+            margin: .5em .1em;
+        }
+    }
+
+    .left.homeAwayType {
+        margin-left: 0;
+    }
+
+    .right.homeAwayType {
+        margin-right: 0;
+
+        @media(min-width: $widthMobile) {
+            margin-right: .1em;
+        }        
+    }
+
+    .oddValue {
+        font-size: 1.4rem;
+        line-height: 1em;
+    }
+}
+
+.favouriteWrapper {
+    .button {
+        margin: 0 0 0 .5em;
+        border: none;
+        border-radius: 0;
+        height: 100%;
+        padding: 2.1em .9em 2.1em .8em;
+    }
+}
+
+.fa-star {
+    font-size: 1.4rem;
 }

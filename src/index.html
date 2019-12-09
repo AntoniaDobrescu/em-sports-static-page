@@ -8,9 +8,7 @@
             maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Sports Page</title>
-        <link rel="stylesheet" href="../src/font
-            icon/fontawesome-free-5.11.2-web/fontawesome-free-5.11.2-web/css/all.min.css">
-        
+        <link rel="stylesheet" href="./fontIcon/fontawesome/css/all.min.css">
         <link rel="stylesheet" type="text/css" href="../src/style/main.css">
     </head>
 
@@ -112,55 +110,193 @@
                             <span class="teamName">Club Olimpique de Medeine</span>
                         </div>
                         <div class="infoOdds">
-                            <button class="odd button">
-                                <span class="oddText">Esperance Sportive de Tunis</sp>
+                            <button class="odd button right">
+                                <span class="oddText">Esperance Sportive de
+                                    Tunis</span>
                                 <span class="oddValue">2.55</span>
                             </button>
-                            <button class="odd button">
+                            <button class="odd button center">
                                 <span class="oddText">Draw</span>
                                 <span class="oddValue">3.40</span>
                             </button>
-                            <button class="odd button">
+                            <button class="odd button left">
                                 <span class="oddText">Club Olimpique de Medeine</span>
-                                <span class="oddValue">2.55</d>
+                                <span class="oddValue">2.55</span>
                             </button>
-                        </span>
+                        </div>
                     </div>
                     <div class="pagination">
                         <ul class="paginationList">
-                            <li class="paginationItem">button</li>
-                            <li class="paginationItem"></li>
-                            <li class="paginationItem active"></li>
-                            <li class="paginationItem"></li>
-                            <li class="paginationItem"></li>
+                            <li class="paginationItem">
+                                <button class="bannerNavigation left"></button>
+                            </li>
+                            <li class="paginationItem">
+                                <button class="bannerNavigation"></button>
+                            </li>
+                            <li class="paginationItem">
+                                <button class="bannerNavigation active"></button>
+                            </li>
+                            <li class="paginationItem">
+                                <button class="bannerNavigation"></button>
+                            </li>
+                            <li class="paginationItem">
+                                <button class="bannerNavigation right"></button>
+                            </li>
                         </ul>
                     </div>
                 </section>
                 <section class="bettingSection">
                     <div class="tabsContainer">
-                        <button class="tab">Live</button>
-                        <button class="tab">Upcoming</button>
-                        <button class="tab">Top links</button>
+                        <button class="tab button active">
+                            <span class="buttonText">Live</span>
+                            <span class="buttonCounter">21</span>
+                            <i class="fas fa-caret-up iconTab"></i>
+                        </button>
+                        <button class="tab button">
+                            <span class="buttonText">Upcoming</span>
+                            <span class="buttonCounter">345</span>
+                            <i class="fas fa-caret-up iconTab"></i>
+                        </button>
+                        <button class="tab button last">
+                            <span class="buttonText">Top links</span>
+                            <span class="buttonCounter"></span>
+                            <i class="fas fa-caret-up iconTab"></i>
+                        </button>
                     </div>
                     <div class="matchesListContainer">
                         <div class="matchesListHeader">
                             <div class="event">Event</div>
                             <div class="oddsContainer">
-                                <div class="oddType">Home</div>
-                                <div class="oddType">Draw</div>
-                                <div class="oddType">Away</div>
-                                <div class="oddType">Points</div>
-                                <div class="oddType">Over</div>
-                                <div class="oddType">Under</div>
+                                <div class="oddType homeAwayType">Home</div>
+                                <div class="oddType homeAwayType">Draw</div>
+                                <div class="oddType homeAwayType">Away</div>
+                                <div class="oddType overUnderType">Points</div>
+                                <div class="oddType overUnderType">Over</div>
+                                <div class="oddType overUnderType">Under</div>
                             </div>
-                            <button class="viewType"></button>
+                            <div class='viewType'>
+                                <button class="viewTypeButton">
+                                    <i class="fas fa-th-list"></i>
+                                </button>
+                            </div>
                         </div>
-                        <div class="matchesList">
-                            <ul class="matchesListItem">
-
+                        <div class="matches">
+                            <ul class="matchesList">
+                                <li class="match">
+                                    <div class="matchWrapper">
+                                        <div class="matchDetailes">
+                                            <div class="matchTeamNamesWrapper">
+                                                <div class="teamName">Rajah
+                                                    Menuri
+                                                    Venkata Gurusaidutt</div>
+                                                <div class="teamName">Max
+                                                    Weisskirchen</div>
+                                                <div class="matchInfo">ESP /
+                                                    Football / 1st half, 35:45</div>
+                                            </div>
+                                            <div class="scoreValues">
+                                                <span class="scoreValueItem">2</span>
+                                                <span class="scoreValueItem">3</span>
+                                            </div>
+                                        </div>
+                                        <div class="matchOdds">
+                                            <button class="button homeAwayType left">
+                                                <span class="oddValue">1.22</span>
+                                            </button>
+                                            <button class="button homeAwayType">
+                                                <span class="oddValue">5.01</span>
+                                            </button>
+                                            <button class="button homeAwayType right">
+                                                <span class="oddValue">9.87</span>
+                                            </button>
+                                            <button class="button overUnderType">
+                                                <span class="oddValue">1.22</span>
+                                            </button>
+                                            <button class="button overUnderType">
+                                                <span class="oddValue">5.01</span>
+                                            </button>
+                                            <button class="button overUnderType left">
+                                                <span class="oddValue">9.87</span>
+                                            </button>
+                                        </div>
+                                        <div class="favouriteWrapper">
+                                            <button class="button">
+                                                <i class="far fa-star"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="match">
+                                    <div class="matchWrapper">
+                                        <div class="matchDetailes">
+                                            <div class="matchTeamNamesWrapper">
+                                                <div class="teamName">Rajah
+                                                    Menuri
+                                                    Venkata Gurusaidutt</div>
+                                                <div class="teamName">Max
+                                                    Weisskirchen</div>
+                                                <div class="matchInfo">ESP /
+                                                    Football / 1st half, 35:45</div>
+                                            </div>
+                                            <div class="scoreValues">
+                                                <span class="scoreValueItem">4</span>
+                                                <span class="scoreValueItem">3</span>
+                                            </div>
+                                        </div>
+                                        <div class="matchOdds">
+                                            <button class="button left">
+                                                <span class="oddValue">1.73</span>
+                                            </button>
+                                            <button class="button">
+                                                <span class="oddValue">2.25</span>
+                                            </button>
+                                            <button class="button right">
+                                                <span class="oddValue">3.83</span>
+                                            </button>
+                                        </div>
+                                        <div class="favouriteWrapper">
+                                            <button class="button">
+                                                <i class="far fa-star"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="match">
+                                    <div class="matchWrapper">
+                                        <div class="matchDetailes">
+                                            <div class="matchTeamNamesWrapper">
+                                                <div class="teamName">Rajah
+                                                    Menuri
+                                                    Venkata Gurusaidutt</div>
+                                                <div class="teamName">Max
+                                                    Weisskirchen</div>
+                                                <div class="matchInfo">ESP /
+                                                    Football / 1st half, 35:45</div>
+                                            </div>
+                                            <div class="scoreValues">
+                                                <span class="scoreValueItem">2</span>
+                                                <span class="scoreValueItem">3</span>
+                                            </div>
+                                        </div>
+                                        <div class="matchOdds">
+                                            <button class="button left">
+                                                <span class="oddValue">1.22</span>
+                                            </button>
+                                            <button class="button">
+                                                <span class="oddValue">5.01</span>
+                                            </button>
+                                            <button class="button right">
+                                                <span class="oddValue">9.87</span>
+                                            </button>
+                                        </div>
+                                        <div class="favouriteWrapper">
+                                            <button class="button">
+                                                <i class="far fa-star"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </li>
                             </ul>
-                            <ul class="matchListItem"></ul>
-                            <ul class="matchListItem"></ul>
                         </div>
                     </div>
                 </section>
