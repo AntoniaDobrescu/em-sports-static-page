@@ -424,11 +424,49 @@ html {
   font-family: "Roboto Condensed", Lato, Helvetica, Arial, Sans-Serif;
 }
 
+@media (min-width: 2000px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 3000px) {
+  html {
+    font-size: 16px;
+  }
+}
+
 .container {
   margin: 0 auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #102740;
+}
+
+@media (min-width: 1155px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (min-width: 1155px) {
+  .mainContent {
+    width: 100%;
+    max-width: 71rem;
+  }
+}
+
+@media (min-width: 1155px) {
+  .menu {
+    width: 100%;
+    max-width: 18.5rem;
+    margin-right: 1em;
+  }
 }
 
 .fa-search .iconButton {
@@ -440,10 +478,22 @@ html {
   border: none;
 }
 
+@media (min-width: 1155px) {
+  .searchBarButton {
+    padding: 1.2em .8em;
+  }
+}
+
 .searchBarInput {
   width: 100%;
   padding: 1.825em 1.2em 1.825em;
   border: none;
+}
+
+@media (min-width: 1155px) {
+  .searchBarInput {
+    padding: 1.6em 0 1.4em 1.2em;
+  }
 }
 
 .searchBar {
@@ -451,6 +501,12 @@ html {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 2em;
+}
+
+@media (min-width: 1155px) {
+  .searchBar {
+    margin-bottom: .5em;
+  }
 }
 
 ::-webkit-input-placeholder {
@@ -477,6 +533,165 @@ html {
   display: none;
 }
 
+@media (min-width: 1155px) {
+  .boxesWrapper {
+    display: block;
+  }
+}
+
+.itemButton {
+  cursor: pointer;
+}
+
+.liveCategory .headerCategory {
+  background-color: #264570;
+}
+
+.liveCategory .titleCategory {
+  color: #ffffff;
+}
+
+.liveCategory .itemContent .itemButton {
+  border-bottom: 0.1em dotted #328dc9;
+  background-color: #0b1a2b;
+}
+
+.liveCategory .itemContent.last .itemButton {
+  border-bottom: none;
+}
+
+.liveCategory .itemName {
+  color: #ffffff;
+}
+
+.liveCategory .iconCategoryContainer {
+  background-color: #20436a;
+}
+
+.liveCategory .itemIcon {
+  padding: 1.1em .8em;
+  background-color: #08121e;
+}
+
+.favoritesCategory .headerCategory, .topLinksCategory .headerCategory {
+  border-bottom: 0.2em solid #CAD3E2;
+}
+
+.favoritesCategory .titleCategory, .topLinksCategory .titleCategory {
+  color: #264570;
+}
+
+.favoritesCategory .iconMenu, .topLinksCategory .iconMenu {
+  color: #264570;
+}
+
+.titleCategory {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.headerCategory {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #d9dfeb;
+}
+
+.iconCategoryContainer {
+  padding: 1.3em .7em 1.1em;
+  background-color: #CAD3E2;
+}
+
+.itemIcon {
+  background-color: #d3dbe9;
+  padding: .6em .8em;
+}
+
+.itemIconNameWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: flex-start;
+          flex-flow: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.itemIconNameWrapper .itemName {
+  margin: 0 0 0 .8em;
+}
+
+.boxCategory {
+  margin-bottom: .5em;
+}
+
+.listContent .itemButton {
+  width: 100%;
+  padding: 0;
+  border: none;
+  background-color: #e6ebf4;
+  border-bottom: 0.1em dotted #939da7;
+}
+
+.listContent .last {
+  border-bottom: none;
+}
+
+.iconMenu {
+  color: #93a8ca;
+  font-size: 1.6rem;
+}
+
+.boxesWrapper .icon {
+  width: 1.4em;
+  height: 1.4em;
+}
+
+.itemName, .contentCategory .text {
+  font-family: "Roboto", Lato, Helvetica, Arial, Sans-Serif;
+  font-size: 1.2rem;
+  color: #11476b;
+}
+
+.contentCategory {
+  background-color: #e6ebf4;
+}
+
+.contentCategory.favorites {
+  padding: 1.3em 2.6em;
+}
+
+.contentCategory .text {
+  text-align: center;
+}
+
+.titleCategoryContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.6em 1em 1.4em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.iconButton {
+  font-size: 1.4rem;
+  color: #91a1ba;
+  cursor: pointer;
+}
+
 .bannerSectionWrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -489,7 +704,7 @@ html {
       -ms-flex-pack: end;
           justify-content: flex-end;
   height: 18rem;
-  background: url("../img/banner.jpg") center no-repeat;
+  background: url("../img/bannerLarge.jpg") center no-repeat;
   background-size: cover;
   padding: 0 .6em .9em;
 }
@@ -579,7 +794,9 @@ html {
 }
 
 .scoreInfo .scoreTeam {
-  background-color: #328dc9;
+  background: #328dc9;
+  background: -webkit-gradient(linear, left bottom, left top, from(#328dc9), color-stop(50%, #328dc9), color-stop(51%, #266c9a), to(#328dc9));
+  background: linear-gradient(0deg, #328dc9 0%, #328dc9 50%, #266c9a 51%, #328dc9 100%);
   padding: 1.1em 1.1em;
   border-radius: .2em;
   -webkit-box-sizing: border-box;
@@ -608,6 +825,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 .button.center {
@@ -675,9 +893,10 @@ html {
   background-color: #405266;
   border-radius: .2em;
   margin: 0 .5em;
+  cursor: pointer;
 }
 
-.bannerNavigation.active {
+.bannerNavigation.active, .bannerNavigation:active, .bannerNavigation:hover {
   background-color: #3CD300;
 }
 
@@ -709,8 +928,8 @@ html {
   background: #132f4b;
   border-bottom: 0.4em solid #1f4766;
   position: relative;
-  padding: 1rem 0 1.4rem;
-  margin-right: 1px;
+  padding: 1em 0 1.4em;
+  margin-right: .1em;
 }
 
 .tab.last {
@@ -723,7 +942,7 @@ html {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   left: 50%;
-  bottom: -7px;
+  bottom: -.35em;
   font-size: 2rem;
   color: #2a75a6;
 }
@@ -826,6 +1045,7 @@ html {
   border: none;
   padding: .9em .95em;
   margin: 0 0 0 .5em;
+  cursor: pointer;
 }
 
 .matchDetailes {
@@ -871,7 +1091,7 @@ html {
 
 .matchTeamNamesWrapper .teamName {
   font-size: 1.2rem;
-  color: #175986;
+  color: #11476b;
 }
 
 .matchTeamNamesWrapper .matchInfo {
@@ -894,7 +1114,23 @@ html {
   font-size: 1.4rem;
 }
 
-.matchOdds .button.homeAwayType {
+.infoOdds .button, .matchOdds .button {
+  background: #c7cdd6;
+  background: -webkit-gradient(linear, left bottom, left top, from(#c7cdd6), color-stop(15%, #dae0e8), to(#eff3f9));
+  background: linear-gradient(0deg, #c7cdd6 0%, #dae0e8 15%, #eff3f9 100%);
+}
+
+.infoOdds .button.active, .infoOdds .button:hover, .infoOdds .button:active, .matchOdds .button.active, .matchOdds .button:hover, .matchOdds .button:active {
+  background: #0e3a57;
+  background: -webkit-gradient(linear, left bottom, left top, from(#0e3a57), color-stop(15%, #0f3e5e), to(#185d8c));
+  background: linear-gradient(0deg, #0e3a57 0%, #0f3e5e 15%, #185d8c 100%);
+}
+
+.infoOdds .button.active .oddValue, .infoOdds .button.active .oddText, .infoOdds .button:hover .oddValue, .infoOdds .button:hover .oddText, .infoOdds .button:active .oddValue, .infoOdds .button:active .oddText, .matchOdds .button.active .oddValue, .matchOdds .button.active .oddText, .matchOdds .button:hover .oddValue, .matchOdds .button:hover .oddText, .matchOdds .button:active .oddValue, .matchOdds .button:active .oddText {
+  color: #ffffff;
+}
+
+.infoOdds .button.homeAwayType, .matchOdds .button.homeAwayType {
   display: block;
   text-align: center;
   width: 100%;
@@ -902,12 +1138,12 @@ html {
   margin: .5em .1em;
 }
 
-.matchOdds .button.overUnderType, .matchOdds .box {
+.infoOdds .button.overUnderType, .infoOdds .midBox, .matchOdds .button.overUnderType, .matchOdds .midBox {
   display: none;
 }
 
 @media (min-width: 710px) {
-  .matchOdds .button.overUnderType, .matchOdds .box {
+  .infoOdds .button.overUnderType, .infoOdds .midBox, .matchOdds .button.overUnderType, .matchOdds .midBox {
     display: block;
     text-align: center;
     width: 100%;
@@ -916,33 +1152,33 @@ html {
   }
 }
 
-.matchOdds .box {
+.infoOdds .midBox, .matchOdds .midBox {
   border: 0.1em solid #eaedf0;
 }
 
-.matchOdds .left.homeAwayType {
+.infoOdds .left.homeAwayType, .matchOdds .left.homeAwayType {
   margin-left: 0;
 }
 
-.matchOdds .right.homeAwayType {
+.infoOdds .right.homeAwayType, .matchOdds .right.homeAwayType {
   margin-right: 0;
 }
 
 @media (min-width: 710px) {
-  .matchOdds .right.homeAwayType {
+  .infoOdds .right.homeAwayType, .matchOdds .right.homeAwayType {
     margin-right: .1em;
   }
 }
 
-.matchOdds .active {
-  background-color: #175986;
+.infoOdds .active, .matchOdds .active {
+  background-color: #11476b;
 }
 
-.matchOdds .active .oddValue {
+.infoOdds .active .oddValue, .matchOdds .active .oddValue {
   color: #ffffff;
 }
 
-.matchOdds .oddValue {
+.infoOdds .oddValue, .matchOdds .oddValue {
   font-size: 1.4rem;
   line-height: 0;
 }
@@ -953,6 +1189,10 @@ html {
   border-radius: 0;
   height: 100%;
   padding: 2.1em .9em 2.1em .8em;
+}
+
+.favouriteWrapper .icon:hover, .favouriteWrapper .icon:active {
+  color: #2a75a6;
 }
 
 .fa-star {

@@ -43,19 +43,66 @@ $colorChathamsBlue: #11476b;
 $colorHorizon: #5684a4;
 $colorForestGreen: #3a9221;
 $colorAthensGray: #eaedf0;
-$colorChathamsBlue: #175986;
+$colorCelloDarker: #20436a;
+$colorCatskillWhite: #e6ebf4;
+$colorBaliHali: #91a1ba;
+$colorBotticelli: #d9dfeb;
+$colorBotticelliMedium: #d3dbe9;
+$colorBotticelliDarker: #CAD3E2;
+$colorFireflyDarker: #08121e;
+$colorFirefly: #0b1a2b;
+
+$colorGradient: rgb(199,205,214);
+$colorGradient2: rgb(218,224,232);
+$colorGradient3: rgb(239,243,249);
+
+$colorGradientActive: rgb(14,58,87);
+$colorGradientActive2: rgb(15,62,94);
+$colorGradientActive3: rgb(24,93,140);
+
+$colorScoreGradient: rgb(50,141,201);
+$colorScoreGradient2: rgb(38,108,154);
 
 html {
     font-size: 10px;
     min-height: 100vh;
     background: $colorElephant;
     font-family: $fontRobotoCondensed;
+
+    @media (min-width: 2000px) {
+        font-size: 14px;
+    }
+
+    @media (min-width: 3000px) {
+        font-size: 16px;
+    }
 }
 
 .container {
     margin: 0 auto;
     box-sizing: border-box;
     background-color: $colorElephant;
+ 
+    @media (min-width: $widthTablet) {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.mainContent {
+    @media (min-width: $widthTablet) {
+        width: 100%;
+        max-width: 71rem;
+    }
+}
+
+.menu {
+
+    @media (min-width: $widthTablet) {
+        width: 100%;
+        max-width: 18.5rem;
+        margin-right: 1em;
+    }
 }
 
 .fa-search .iconButton {
@@ -65,17 +112,29 @@ html {
 .searchBarButton {
     padding: 1.825em .8em 1.825em;
     border: none;
+
+    @media (min-width: $widthTablet) {
+        padding: 1.2em .8em;
+    }
 }
 
 .searchBarInput {
     width: 100%;
     padding: 1.825em 1.2em 1.825em;
     border: none;
+    
+    @media (min-width: $widthTablet) {
+        padding: 1.6em 0 1.4em 1.2em;
+    }
 }
 
 .searchBar {
     display: flex;
     margin-bottom: 2em;
+
+    @media (min-width: $widthTablet) {
+        margin-bottom: .5em;
+    }
 }
 
 ::placeholder {
@@ -85,6 +144,148 @@ html {
 
 .boxesWrapper {
     display: none;
+
+    @media(min-width: $widthTablet) {
+        display: block;
+    }
+}
+
+.itemButton {
+    cursor: pointer;
+}
+
+.liveCategory {
+    .headerCategory{
+        background-color: $colorAstronaut;
+    }
+    .titleCategory {
+        color: $colorWhite;
+    }
+
+    .itemContent .itemButton {
+        border-bottom: .1em dotted $colorCuriousBlue;
+        background-color: $colorFirefly;
+    }
+
+    .itemContent.last .itemButton {
+        border-bottom: none;
+    }
+    .itemName {
+        color: $colorWhite;
+    }
+    .iconCategoryContainer {
+        background-color: $colorCelloDarker;
+    }
+    
+    .itemIcon {
+        padding: 1.1em .8em;
+        background-color: $colorFireflyDarker;
+    }
+
+}
+
+.favoritesCategory, .topLinksCategory {
+    .headerCategory {
+        border-bottom: .2em solid $colorBotticelliDarker;
+    }
+
+    .titleCategory {
+        color: $colorAstronaut;
+    }
+
+    .iconMenu {
+        color: $colorAstronaut;
+    }
+}
+
+.titleCategory {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.headerCategory {
+    display: flex;
+    flex-direction: row;
+    background-color: $colorBotticelli;
+}
+
+.iconCategoryContainer {
+    padding: 1.3em .7em 1.1em;
+    background-color: $colorBotticelliDarker;
+}
+
+.itemIcon {
+    background-color: $colorBotticelliMedium;
+    padding: .6em .8em;
+}
+
+.itemIconNameWrapper {
+    display: flex;
+    flex-flow: flex-start;
+    align-items: center;
+
+    .itemName {
+        margin: 0 0 0 .8em;
+    }
+}
+
+.boxCategory {
+    margin-bottom: .5em;
+}
+
+.listContent {
+    .itemButton {
+        width: 100%;
+        padding: 0;
+        border: none;
+        background-color: $colorCatskillWhite;
+        border-bottom: .1em dotted $colorRegentGrey;
+    }
+    .last {
+        border-bottom: none;
+    }
+}
+
+.iconMenu {
+    color: $colorPoloBlue;
+    font-size: 1.6rem;
+}
+
+.boxesWrapper .icon {
+    width: 1.4em;
+    height: 1.4em;
+}
+
+.itemName, .contentCategory .text {
+    font-family: $fontRoboto;
+    font-size: 1.2rem;
+    color: $colorChathamsBlue;
+}
+
+.contentCategory {
+    background-color: $colorCatskillWhite;
+
+    &.favorites {
+        padding: 1.3em 2.6em;
+    }
+
+    .text {
+        text-align: center;
+    }
+}
+
+.titleCategoryContainer {
+    display: flex;
+    padding: 1.6em 1em 1.4em;
+    justify-content:space-between;
+    align-items:center;
+    width: 100%;
+}
+
+.iconButton {
+    font-size: 1.4rem;
+    color: $colorBaliHali;
+    cursor: pointer;
 }
 
 .bannerSectionWrapper {
@@ -92,7 +293,7 @@ html {
     flex-direction: column;
     justify-content: flex-end;
     height: 18rem;
-    background: url('../img/banner.jpg') center no-repeat;
+    background: url('../img/bannerLarge.jpg') center no-repeat;
     background-size: cover;
     padding: 0 .6em .9em;
     
@@ -155,7 +356,8 @@ html {
     }
 
     .scoreTeam {
-        background-color: $colorCuriousBlue;
+        background: $colorScoreGradient;
+        background: linear-gradient(0deg, $colorScoreGradient 0%, $colorScoreGradient 50%, $colorScoreGradient2 51%, $colorScoreGradient 100%);
         padding: 1.1em 1.1em;
         border-radius: .2em;
         box-sizing: border-box;
@@ -178,6 +380,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 }
 
 .button.center {
@@ -236,10 +439,11 @@ html {
     background-color: $colorFiod;
     border-radius: .2em;
     margin: 0 .5em;
-}
+    cursor: pointer;
 
-.bannerNavigation.active {
-    background-color: $colorHarlequin;
+    &.active , &:active, &:hover {
+        background-color: $colorHarlequin;
+    }
 }
 
 .bannerSection.left {
@@ -268,8 +472,8 @@ html {
     background: $colorElephantLight;
     border-bottom: .4em solid $colorCello;
     position: relative;
-    padding: 1rem 0 1.4rem;
-    margin-right: 1px;
+    padding: 1em 0 1.4em;
+    margin-right: .1em;
 
     &.last {
         margin-right: 0;
@@ -280,7 +484,7 @@ html {
         position: absolute;
         transform: translateX(-50%);
         left: 50%;
-        bottom: -7px;
+        bottom: -.35em;
         font-size: 2rem;
         color: $colorJellyBean;
     }
@@ -361,6 +565,7 @@ html {
         border: none;
         padding: .9em .95em;
         margin: 0 0 0 .5em;
+        cursor: pointer;
     }
 }
 
@@ -375,6 +580,7 @@ html {
     background-color: $colorWhite;
     border-bottom: .1em solid $colorElephant;
 }
+
 .oddsContainer {
 
     .oddType {
@@ -422,7 +628,23 @@ html {
     font-size: 1.4rem;
 }
 
-.matchOdds {
+.infoOdds, .matchOdds {
+
+    .button {
+        background: $colorGradient;
+        background: linear-gradient(0deg, $colorGradient 0%, $colorGradient2 15%, $colorGradient3 100%);
+
+        &.active, &:hover, &:active {
+            background: $colorGradientActive;
+            background: linear-gradient(0deg, $colorGradientActive 0%, $colorGradientActive2 15%, $colorGradientActive3 100%);
+
+            .oddValue, .oddText {
+                color: $colorWhite;
+            }
+        }
+    }
+
+
     
     .button.homeAwayType {
         display: block;
@@ -432,7 +654,7 @@ html {
         margin: .5em .1em;
     }
 
-    .button.overUnderType, .box {
+    .button.overUnderType, .midBox {
         display: none;
 
         @media(min-width: $widthMobile) {
@@ -444,7 +666,7 @@ html {
         }
     }
 
-    .box{
+    .midBox{
         border: .1em solid $colorAthensGray;
     }
 
@@ -480,6 +702,13 @@ html {
         border-radius: 0;
         height: 100%;
         padding: 2.1em .9em 2.1em .8em;
+    }
+
+    .icon {
+
+        &:hover, &:active {
+            color: $colorJellyBean;
+        }
     }
 }
 
