@@ -782,6 +782,12 @@ html {
   width: 57%;
 }
 
+@media (min-width: 710px) {
+  .matchesListHeader .event, .matchWrapper .matchDetailes {
+    width: 45%;
+  }
+}
+
 .matchesListHeader .oddsContainer, .matchWrapper .matchOdds {
   width: 39%;
   display: -webkit-box;
@@ -794,6 +800,12 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (min-width: 710px) {
+  .matchesListHeader .oddsContainer, .matchWrapper .matchOdds {
+    width: 51%;
+  }
 }
 
 .matchesListHeader {
@@ -859,7 +871,7 @@ html {
 
 .matchTeamNamesWrapper .teamName {
   font-size: 1.2rem;
-  color: #11476b;
+  color: #175986;
 }
 
 .matchTeamNamesWrapper .matchInfo {
@@ -890,18 +902,22 @@ html {
   margin: .5em .1em;
 }
 
-.matchOdds .button.overUnderType {
+.matchOdds .button.overUnderType, .matchOdds .box {
   display: none;
 }
 
 @media (min-width: 710px) {
-  .matchOdds .button.overUnderType {
+  .matchOdds .button.overUnderType, .matchOdds .box {
     display: block;
     text-align: center;
     width: 100%;
     padding: 1.4em 1.5em;
     margin: .5em .1em;
   }
+}
+
+.matchOdds .box {
+  border: 0.1em solid #eaedf0;
 }
 
 .matchOdds .left.homeAwayType {
@@ -918,9 +934,17 @@ html {
   }
 }
 
+.matchOdds .active {
+  background-color: #175986;
+}
+
+.matchOdds .active .oddValue {
+  color: #ffffff;
+}
+
 .matchOdds .oddValue {
   font-size: 1.4rem;
-  line-height: 1em;
+  line-height: 0;
 }
 
 .favouriteWrapper .button {

@@ -42,6 +42,8 @@ $colorPoloBlue: #93a8ca;
 $colorChathamsBlue: #11476b;
 $colorHorizon: #5684a4;
 $colorForestGreen: #3a9221;
+$colorAthensGray: #eaedf0;
+$colorChathamsBlue: #175986;
 
 html {
     font-size: 10px;
@@ -327,6 +329,10 @@ html {
 
 .matchesListHeader .event, .matchWrapper .matchDetailes {
     width: 57%;
+
+    @media(min-width: $widthMobile) {
+        width: 45%;
+    }
 }
 
 .matchesListHeader .oddsContainer, .matchWrapper .matchOdds {
@@ -334,6 +340,10 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    @media(min-width: $widthMobile) {
+        width: 51%;
+    }
 }
 
 .matchesListHeader {
@@ -422,7 +432,7 @@ html {
         margin: .5em .1em;
     }
 
-    .button.overUnderType {
+    .button.overUnderType, .box {
         display: none;
 
         @media(min-width: $widthMobile) {
@@ -432,6 +442,10 @@ html {
             padding: 1.4em 1.5em;
             margin: .5em .1em;
         }
+    }
+
+    .box{
+        border: .1em solid $colorAthensGray;
     }
 
     .left.homeAwayType {
@@ -446,9 +460,16 @@ html {
         }        
     }
 
+    .active {
+        background-color: $colorChathamsBlue;
+        .oddValue{
+            color: $colorWhite;
+        }
+    }
+
     .oddValue {
         font-size: 1.4rem;
-        line-height: 1em;
+        line-height: 0;
     }
 }
 
